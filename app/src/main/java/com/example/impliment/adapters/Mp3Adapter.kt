@@ -28,10 +28,10 @@ class Mp3Adapter(var context: Context,var list: ArrayList<Mp3Class>,var myItemCl
               itemView.setOnClickListener {
                 myItemClickListener.onItemClick(mp3Class,position)
               }
-//              itemView.setOnLongClickListener {
-//                  myItemClickListener.onItemLongClick(mp3Class,position)
-//                  true
-//              }
+              itemView.setOnLongClickListener {
+                  myItemClickListener.onItemLongClick(mp3Class,position)
+                  true
+              }
           }
     }
 
@@ -48,7 +48,7 @@ class Mp3Adapter(var context: Context,var list: ArrayList<Mp3Class>,var myItemCl
     }
     interface MyItemClickListener{
         fun onItemClick(mp3Class: Mp3Class,position: Int)
-       // fun onItemLongClick(mp3Class: Mp3Class,position: Int)
+        fun onItemLongClick(mp3Class: Mp3Class,position: Int)
     }
 
     override fun onItemMove(fromPosition: Int, toPosition: Int) {
